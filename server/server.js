@@ -21,6 +21,6 @@ const app = express();
 
 app.use(require('./routes/index'));
 
-app.listen(process.env.PORT, () => {
-    console.log('Escuchando puerto: ', process.env.PORT);
+app.listen(process.env.NODE_ENV, () => {
+    console.log('Escuchando puerto: ', process.env.NODE_ENV);
 });
