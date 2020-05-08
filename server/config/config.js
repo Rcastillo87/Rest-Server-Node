@@ -9,13 +9,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // ============================
 //  base de datos
 // ============================
-let urlBD;
+
 if (process.env.NODE_ENV === 'dev') {
-    urlBD = 'mongodb://localhost:27017/cafe';
+    process.env.URLDB = 'mongodb://localhost:27017/cafe';
 } else {
-    urlBD = process.env.URLBD;
+    process.env.URLDB = process.env.URLBD;
 }
-process.env.URLDB = urlBD;
 // ============================
 //  semilla token
 // ============================
