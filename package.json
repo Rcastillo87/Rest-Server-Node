@@ -1,24 +1,26 @@
 {
-  "name": "rest-server",
-  "version": "1.0.0",
-  "description": "rest server base",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "ruben castillo",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoclient": "^1.0.3",
-    "mongodb": "^3.5.7",
-    "mongoose": "^5.9.12",
-    "mongoose-unique-validator": "^2.0.3",
-    "underscore": "^1.10.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+    "name": "rest-server",
+    "version": "1.0.0",
+    "description": "rest server base",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "nodemon": "nodemon server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "ruben castillo",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoclient": "^1.0.3",
+        "mongodb": "^3.5.7",
+        "mongoose": "^5.9.12",
+        "mongoose-unique-validator": "^2.0.3",
+        "underscore": "^1.10.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
 }
