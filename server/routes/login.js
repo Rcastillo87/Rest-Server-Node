@@ -29,7 +29,7 @@ app.post('/login', (req, res) => {
             });
         }
 
-        let token = jwt.sign({ usuario }, process.env.SEED, { expiresIn: process.env.TIMETOKEN });
+        let token = jwt.sign({ usuario }, process.env.SEED, { expiresIn: process.env.CADUCIDAD_TOKEN });
 
         res.json({
             ok: true,
