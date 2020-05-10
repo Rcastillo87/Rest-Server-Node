@@ -14,10 +14,11 @@ db.once('open', () => {
     console.log('connected'); // si esta todo ok, imprime esto
 });
 ////////////////////////////////////////////////////////////////////////////
-
+const path = require('path');
 const express = require('express');
 const app = express();
 app.use(require('./routes/index'));
+app.use(express.static(path.resolve(__dirname, '../public')))
 
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto: ', process.env.PORT);

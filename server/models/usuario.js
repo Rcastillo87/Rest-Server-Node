@@ -28,7 +28,7 @@ let usuarioSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        default: 'USER_ROLE',
+        default: 'USER-ROLE',
         enum: rolesValidos
     },
     estado: {
