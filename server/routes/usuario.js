@@ -3,13 +3,7 @@ const app = express();
 const bcrypt = require('bcrypt');
 const Usuario = require('../models/usuario');
 const { verificarToken, verificaAdmin_Role } = require('../middlewares/autenticacion');
-const bodyParser = require('body-parser');
 const _ = require('underscore');
-
-
-// configuramos la app para que use bodyParser(), esto nos dejara usar la informacion de los POST
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 app.get('/usuario', verificarToken, (req, res) => {
 

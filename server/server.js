@@ -17,6 +17,12 @@ db.once('open', () => {
 const path = require('path');
 const express = require('express');
 const app = express();
+
+const bodyParser = require('body-parser');
+// configuramos la app para que use bodyParser(), esto nos dejara usar la informacion de los POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(require('./routes/index'));
 app.use(express.static(path.resolve(__dirname, '../public')))
 
